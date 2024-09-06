@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    padding: 10px;
+    box-sizing: border-box;
+}
+div{
+    box-sizing: border-box;
+}
+.line1{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(248, 157, 19);  
+    height: 30px;
+}
+
+.inputboxes{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.titlebar{
+    display: flex;
+}
+.titlecol1{
+    width: 530px;
+}
+
+.empty{
+    width: 100%;
+}
+.titlecol1 h1{
+    margin-top: 5px;
+    width: 300px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+
+.titlecol1 h3{
+    margin-top: 10px;
+}
+.titlecol2 {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    text-align: right;
+
+}
+
+.titlecol2 p{
+    font-size: 10px;
+    text-align: right;
+}
+#date {
+    border-right: 2px solid rgb(248, 157, 19);
+    height: 30px;
+    width: 50%;
+    margin-left: 20px;
+    gap: 20px;  
+    white-space: nowrap;
+}
+
+#custID{
+    margin-left: 20px;
+    gap: 20px
+}
+
+.line2{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19); 
+    border-left: 2px solid rgb(248, 157, 19);     
+    height: 30px;
+   
+}
+
+#custName{
+    margin-left: 20px;
+    gap: 20px
+}
+
+.line3{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19); 
+    border-left: 2px solid rgb(248, 157, 19);     
+    min-height: 30px;
+}
+
+.line3 p{
+    margin-left: 20px;
+    gap: 20px;
+}
+
+.line4{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19); 
+    border-left: 2px solid rgb(248, 157, 19);     
+    height: 30px;
+}
+
+#signcopy{
+    display: flex;
+    align-items: center;
+    border-right: 2px solid rgb(248, 157, 19);
+    height: 30px;
+    width: 50%;
+    margin-left: 20px;
+    gap: 20px; 
+}
+
+#repName{
+    margin-left: 20px;
+    gap: 20px
+}
+
+.line5{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19); 
+    border-left: 2px solid rgb(248, 157, 19);     
+    height: 30px; 
+}
+
+#contactNumber{
+    display: flex;
+    align-items: center;
+    border-right: 2px solid rgb(248, 157, 19);
+    height: 30px;
+    width: 50%;
+    margin-left: 20px;
+    gap: 20px; 
+}
+
+#email{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: 20px
+}
+
+.MODULE2{
+    margin-top: 20px;
+
+}
+.M2L1{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(248, 157, 19);
+    height: 30px; 
+}
+
+.M2L2,.M2L3,.M2L4{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19); 
+    border-left: 2px solid rgb(248, 157, 19);     
+    height: 30px;
+}
+
+#srNO ,#srNO1,#srNO2,#srNO3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px; 
+    border-right: 2px solid rgb(248, 157, 19); 
+}
+
+#m2name,#m2name1,#m2name2,#m2name3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px; 
+    border-right: 2px solid rgb(248, 157, 19);
+    width: 800px; 
+}
+
+#designation,#designation1,#designation2,#designation3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 350px;
+    border-right: 2px solid rgb(248, 157, 19);
+    box-sizing: border-box;
+}
+
+#signature,#signature1,#signature2,#signature3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+.module3{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 1fr ;
+    
+}
+.module3col1{
+    border-top: 2px solid rgb(248, 157, 19);
+    border-left: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+    width: 50%;
+}
+
+.module3col2{
+    border-right: 2px solid rgb(248, 157, 19);
+    width: 50%;
+    border-top: 2px solid rgb(248, 157, 19);
+    width: 50%;
+}
+.module3element{
+    border-bottom: 2px solid rgb(248, 157, 19);
+    display: flex;
+    align-items: center;
+    height:30px;
+}
+
+.module3element p{
+    margin-left: 20px;
+    width: 150px;
+}
+.module3element input{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.meterReading{
+    margin-top: 10px;
+}
+
+.module4{
+    display: flex;
+    margin-top: 10PX;
+    border-top: 2px solid rgb(248, 157, 19);
+    border-left: 2px solid rgb(248, 157, 19);
+    /* border-right: 2px solid rgb(248, 157, 19); */
+
+}
+
+.m4col1,.m4col3{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-right: 2px solid rgb(248, 157, 19);
+}
+
+.module4 p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.module4 h5,.module4 h6{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.m4col2,.m4col4{
+    width: 20%;
+    border-right: 2px solid rgb(248, 157, 19);
+}
+
+.module4 h5{
+    font-size: medium;
+    height: 30PX;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    text-align: center;
+}
+
+.module4 h6{
+    font-size: medium;
+    height: 30PX;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    text-align: center;
+}
+.m4col1 P,.m4col3 P{
+    padding-left: 20px;
+    height: 30PX;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+
+.m4col2 input,.m4col4 input{
+    flex: 1;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+
+.module5{
+    display: flex;
+    margin-top: 20px;
+    border-left: 2px solid rgb(248, 157, 19);
+    border-top: 2px solid rgb(248, 157, 19);
+}
+
+.m5col1,.m5col3,.m5col2,.m5col4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+.m5col1 div,.m5col2 div,.m5col3 div,.m5col4 div{
+    flex: 1;
+    width: 100%;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+}
+
+.module5 p{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.module5 input{
+    height: 30px;
+
+}
+.module6{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10PX;
+    border-left: 2px solid rgb(248, 157, 19);
+}
+.m6l1{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 30px;
+    border-top: 2px solid rgb(248, 157, 19);
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+    font-size: 25px;
+}
+
+.m6l2{
+    display: flex;
+}
+.m6col1,.m6col2,.m6col3,.m6col4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.m6col1 div,.m6col2 div,.m6col3 div,.m6col4 div{
+    flex: 1;
+    width: 100%;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+}
+
+.module6 p{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.module6 input{
+    height: 30px;
+}
+
+.module8{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-left: 2px solid rgb(248, 157, 19);
+    border-top: 2px solid rgb(248, 157, 19);
+}
+
+.m8l1{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+    height: 30px;
+   
+}
+
+.m8l2{
+    display: flex;
+}
+
+.m8l2col1,.m8l2col2,.m8l2col3{
+    width: 33.333%;
+    border-right: 2px solid rgb(248, 157, 19);
+    
+}
+
+.m8l2 input{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+
+.m8l2 p{
+    flex: 1;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+
+.m8l2 h6{
+    flex: 1;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    font-size: 16px;
+}
+.module7{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-top: 2px solid rgb(248, 157, 19);
+    border-left: 2px solid rgb(248, 157, 19);
+}
+.m7l1{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 20px;
+    height: 30px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+
+}
+
+.m7l2{
+    display: flex;
+    border-bottom: 2px solid rgb(248, 157, 19);
+}
+.m7l2 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-right: 2px solid rgb(248, 157, 19);
+    width: 16.666%;
+}
+.m7l2 input{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.modeule9{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-top: 2px solid rgb(248, 157, 19);
+    border-left: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+}
+.modeule9 div{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    height: 30px; 
+    font-size: 20px;
+}
+.modeule9 div{
+    display: flex;
+    border-bottom: 2px solid rgb(248, 157, 19);
+    height: 30px;
+}
+
+canvas{
+    touch-action: none;
+    height: 100px; 
+    border: 2px solid rgb(248, 157, 19);
+    margin: 10px; 
+}
+
+.signArea{
+    min-height: 100px;
+    display: flex;
+    margin-top: 10px;
+    border-left: 2px solid rgb(248, 157, 19);
+    border-bottom: 2px solid rgb(248, 157, 19);
+    margin-bottom: 50px;  
+}
+
+
+.signareacol1,.signareacol2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-right: 2px solid rgb(248, 157, 19);
+    border-top: 2px solid rgb(248, 157, 19);
+    padding-bottom: 10px;  
+    height: 190px; 
+
+}
+
+.cust_authority,.company_authority{
+   display: flex;
+   box-sizing: border-box;
+}
+
+#customersign,#officerSign{
+    width: 300px;
+    height: 120px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 150px;
+}
+
+.button button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(248, 157, 19);
+    box-shadow: 4px 0px 4px rgba(51, 50, 49, 0.25),-4px 0px 4px rgba(51, 50, 49, 0.25),0px 4px 4px rgba(51, 50, 49, 0.25),0px -4px 4px rgba(51, 50, 49, 0.25);    
+    text-align: center;  
+    border-radius: 10px;
+    border: none;
+}
+
+.resetbutton{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.resetbutton button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(248, 157, 19);
+    box-shadow: 4px 0px 4px rgba(51, 50, 49, 0.25),-4px 0px 4px rgba(51, 50, 49, 0.25),0px 4px 4px rgba(51, 50, 49, 0.25),0px -4px 4px rgba(51, 50, 49, 0.25);    
+    text-align: center;  
+    border-radius: 10px;
+    border: none;
+}
