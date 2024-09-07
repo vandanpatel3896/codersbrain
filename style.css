@@ -4,24 +4,74 @@
    
 }
 
-body{
-    padding: 10px;
+@media print {
+    .html2pdf_page-break {
+        display: block;
+        page-break-before: always;
+    }
+}
+@media print {
+    body {
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* General settings to make the webpage fit well in an A4 page */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 12pt; /* Adjust font size for print */
     box-sizing: border-box;
 }
-div{
+
+.page {
+    width: 100%;
+    max-width: 210mm;
+    min-height: 297mm;
+    padding: 10mm;
+    margin: auto;
+    background: white;
     box-sizing: border-box;
+    page-break-after: always;
+}
+
+/* Prevent content overflow */
+* {
+    box-sizing: border-box;
+}
+
+/* Adjust widths of elements to fit within the A4 page */
+.module1, .MODULE2, .module3, .module4, .module5, .module6, .module7, .module8, .module9, .signArea,.titlebar,.resetbutton {
+    max-width: 190mm; /* A4 width minus margins */
+    margin: 0 auto;
+}
+
+/* Adjust text and input fields to fit well within the page */
+input, p, h1, h2, h3, h4, h5, h6 {
+    max-width: 100%;
+    overflow-wrap: break-word; /* Break words to prevent overflow */
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 .line1{
     margin-top: 5px;
     display: flex;
     align-items: center;
     border: 2px solid rgb(248, 157, 19);  
-    height: 30px;
+    min-height: 30px;
 }
 
 .inputboxes{
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 input{
@@ -58,10 +108,15 @@ input{
 
 }
 
+.titlecol2img img{
+    height: 30px;
+    width: 100px;
+}
 .titlecol2 p{
     font-size: 10px;
     text-align: right;
 }
+
 #date {
     border-right: 2px solid rgb(248, 157, 19);
     height: 30px;
@@ -156,60 +211,62 @@ input{
 }
 
 .MODULE2{
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 
 }
-.M2L1{
+
+.MODULE2 h3{
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.module2col{
     display: flex;
-    align-items: center;
-    border: 2px solid rgb(248, 157, 19);
-    height: 30px; 
+    border-left: 2px solid rgb(248, 157, 19); 
+    border-top: 2px solid rgb(248, 157, 19); 
+
 }
 
-.M2L2,.M2L3,.M2L4{
+.m2col1{
+    width: 10%;
     display: flex;
-    align-items: center;
-    border-bottom: 2px solid rgb(248, 157, 19);
-    border-right: 2px solid rgb(248, 157, 19); 
-    border-left: 2px solid rgb(248, 157, 19);     
-    height: 30px;
+    flex-direction: column;
 }
 
-#srNO ,#srNO1,#srNO2,#srNO3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 30px; 
-    border-right: 2px solid rgb(248, 157, 19); 
-}
-
-#m2name,#m2name1,#m2name2,#m2name3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px; 
+.m2col1 p{
+    flex: 1;
+    padding-left: 20px;
+    width: 100%;
+    min-height: 30px;
+    border-bottom: 2px solid rgb(248, 157, 19); 
     border-right: 2px solid rgb(248, 157, 19);
-    width: 800px; 
 }
 
-#designation,#designation1,#designation2,#designation3{
+.m2col2{
+    padding: 0;
+    width: 40%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 30px;
-    width: 350px;
+    flex-direction: column;
+}
+
+.m2col2 p,.m2col2 input,.m2col3 p,.m2col3 input,.m2col4 p,.m2col4 p{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    width: 100%;
+    min-height: 30px;
+    border-bottom: 2px solid rgb(248, 157, 19); 
     border-right: 2px solid rgb(248, 157, 19);
-    box-sizing: border-box;
+}
+.m2col3{
+    width: 20%;
 }
 
-#signature,#signature1,#signature2,#signature3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 350px;
-    box-sizing: border-box;
+.m2col4{
+    width: 30%;
 }
 
 .module3{
@@ -255,6 +312,7 @@ input{
 
 .module4{
     display: flex;
+    flex-direction: column;
     margin-top: 10PX;
     border-top: 2px solid rgb(248, 157, 19);
     border-left: 2px solid rgb(248, 157, 19);
@@ -262,11 +320,21 @@ input{
 
 }
 
+.module4l1{
+    border-bottom: 2px solid rgb(248, 157, 19);
+    border-right: 2px solid rgb(248, 157, 19);
+}
+
+.module4col2{
+    display: flex;
+    
+}
 .m4col1,.m4col3{
     display: flex;
     flex-direction: column;
     width: 30%;
     border-right: 2px solid rgb(248, 157, 19);
+    
 }
 
 .module4 p{
@@ -282,7 +350,9 @@ input{
     justify-content: center;
 }
 
-
+.module4 h4{
+    padding-left: 20px;
+}
 .m4col2,.m4col4{
     width: 20%;
     border-right: 2px solid rgb(248, 157, 19);
@@ -316,36 +386,22 @@ input{
 
 .module5{
     display: flex;
-    margin-top: 20px;
     border-left: 2px solid rgb(248, 157, 19);
+}
+
+.m5col1{
+    width: 50%;
+    border-right: 2px solid rgb(248, 157, 19);
     border-top: 2px solid rgb(248, 157, 19);
 }
-
-.m5col1,.m5col3,.m5col2,.m5col4{
+.m5col1 div{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 25%;
-}
-.m5col1 div,.m5col2 div,.m5col3 div,.m5col4 div{
-    flex: 1;
-    width: 100%;
+    padding-left: 20px;
+    height: 30px;
     border-bottom: 2px solid rgb(248, 157, 19);
-    border-right: 2px solid rgb(248, 157, 19);
 }
 
-.module5 p{
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.module5 input{
-    height: 30px;
-
-}
 .module6{
     display: flex;
     flex-direction: column;
@@ -385,13 +441,12 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .module6 input{
     height: 30px;
-}
 
+}
 .module8{
     display: flex;
     flex-direction: column;
@@ -468,6 +523,8 @@ input{
 
 }
 
+
+
 .m7l2{
     display: flex;
     border-bottom: 2px solid rgb(248, 157, 19);
@@ -478,14 +535,20 @@ input{
     align-items: center;
     height: 30px;
     border-right: 2px solid rgb(248, 157, 19);
-    width: 16.666%;
+    justify-content: space-evenly;
 }
 .m7l2 input{
     flex: 1;
     width: 100%;
     height: 100%;
 }
-.modeule9{
+.m7l2 p{
+    white-space: nowrap;
+}
+#acc{
+    width: 20%;
+}
+.module9{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -493,7 +556,7 @@ input{
     border-left: 2px solid rgb(248, 157, 19);
     border-right: 2px solid rgb(248, 157, 19);
 }
-.modeule9 div{
+.module9 div{
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -501,7 +564,7 @@ input{
     height: 30px; 
     font-size: 20px;
 }
-.modeule9 div{
+.module9 div{
     display: flex;
     border-bottom: 2px solid rgb(248, 157, 19);
     height: 30px;
@@ -515,7 +578,7 @@ canvas{
 }
 
 .signArea{
-    min-height: 100px;
+    min-height: 80px;
     display: flex;
     margin-top: 10px;
     border-left: 2px solid rgb(248, 157, 19);
@@ -532,19 +595,15 @@ canvas{
     width: 50%;
     border-right: 2px solid rgb(248, 157, 19);
     border-top: 2px solid rgb(248, 157, 19);
-    padding-bottom: 10px;  
-    height: 190px; 
+    padding-bottom: 5px;
+    
+    
 
-}
-
-.cust_authority,.company_authority{
-   display: flex;
-   box-sizing: border-box;
 }
 
 #customersign,#officerSign{
     width: 300px;
-    height: 120px;
+    height: 100px;
 }
 .button{
     display: flex;
