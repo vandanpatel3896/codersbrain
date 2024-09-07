@@ -1,5 +1,6 @@
 
 // Wait until the DOM is fully loaded
+// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     let isDrawing = false;
     let x = 0;
@@ -86,22 +87,22 @@ document.addEventListener("DOMContentLoaded", function() {
     officerSignCanvas.addEventListener("touchmove", preventTouch, { passive: false });
     
     const button = document.getElementById("generatePdfButton");
-    button.addEventListener('click',function(){
-        const element = document.getElementById("element");
-        html2pdf()
-        .from(element)
-        .set({
-        margin: 10,
-        filename: 'document.pdf',
-        html2canvas: { scale: 3, scrollY: 0 },
-        jsPDF: { orientation: 'portrait' ,format:'a3'}
-        })
-        .save();
+    button.addEventListener('click', function () {
+        // Options for html2pdf
+        element1 = document.getElementById("element1")
+        
+        var opt = {
+            margin:       0.5,
+            filename:     'HT_Inspection_Sheet.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 1, scrollY:0},
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
+            pagebreak:    { mode: ['css', 'legacy'] } // Ensure CSS page breaks are respected
+        };
+    
+        html2pdf().from(element1).set(opt).save();
     });
-           
 });
-
-
 
 // Function to clear a canvas
 function clearCanvas(canvas) {
